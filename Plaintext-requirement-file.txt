@@ -1,0 +1,14 @@
+central-bot-ecosystem/
+├── README.md               <-- Master Blueprint & Dokumentasi
+├── landing-page/           <-- Kod HTML/CSS untuk Dashboard Utama
+│   ├── index.html
+│   └── style.css
+├── core-engines/           <-- Skrip Python (The Workers)
+│   ├── pdf_processor.py
+│   ├── ai_validator.py
+│   └── formatter.py
+├── bot-gateways/           <-- Node.js Telegram Bot Logic
+│   ├── telegram_main.js
+│   └── middleware.js
+└── data/                   <-- Template & Konfigurasi
+    └── templates/
