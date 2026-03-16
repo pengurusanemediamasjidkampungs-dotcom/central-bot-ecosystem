@@ -185,3 +185,38 @@ code {
     }
     h1 { font-size: 1.8rem; }
 }
+
+/* 9. Profit Tracker Custom Styles (NEW) */
+.profit-tracker {
+    background: rgba(0, 210, 255, 0.05);
+    border: 1px dashed var(--accent);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0 40px 0;
+    text-align: center;
+}
+
+#profit-counter {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--success);
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    margin: 10px 0;
+    border-left: none; /* Reset border-left dari h2 umum */
+    padding-left: 0;
+}
+
+.growth-rate {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    animation: pulse-glow 2s infinite;
+    font-weight: 600;
+}
+
+@keyframes pulse-glow {
+    0% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 0.4; transform: scale(1); }
+}
