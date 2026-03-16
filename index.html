@@ -12,6 +12,13 @@
     <div class="main-wrapper">
         <header class="glass-container">
             <h1>AI-Powered Automations</h1>
+            
+            <div class="profit-tracker">
+                <p>Estimated Ecosystem Value:</p>
+                <h2 id="profit-counter">RM 1,000.00</h2>
+                <span class="growth-rate">+RM 10.00 / sec (Compounded)</span>
+            </div>
+
             <p class="subtitle">Pilih servis bot untuk bermula:</p>
             
             <div class="bot-links">
@@ -91,6 +98,26 @@
             <p>&copy; 2026 Muhammad Aiman | Digital Coordinator Suite</p>
         </footer>
     </div>
+
+    <script>
+        let modalAsal = 1000.00;
+        const kenaikanSetiapSaat = 10.00;
+        const kaunterElement = document.getElementById('profit-counter');
+
+        function updateCounter() {
+            // Modal bertambah secara berterusan
+            modalAsal += kenaikanSetiapSaat;
+            
+            // Paparkan dalam format RM dengan 2 tempat perpuluhan
+            kaunterElement.innerText = "RM " + modalAsal.toLocaleString('en-MY', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+
+        // Jalankan fungsi update setiap 1 saat (1000ms)
+        setInterval(updateCounter, 1000);
+    </script>
 
 </body>
 </html>
